@@ -1,0 +1,110 @@
+.addButton{
+	width: 100px;
+	height: 100px;
+	position: relative;
+	transition: all 200ms ease;
+}
+
+.addButton .placeHolder{
+	font-family: 'Dosis', sans-serif;
+	font-weight: 400;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 70px;
+	font-size: 100px;
+	color: #fff;
+	visibility: visible;
+	opacity: 1;
+	transition: all 200ms ease;
+	text-transform: scale(1);
+}
+
+
+.addButton .option .icon{
+	display: inline-block;
+	transform: rotate(-45deg);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 200ms ease;
+}
+
+.addButton .option{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	background-color: #48B6C2;
+	text-align: center;
+	line-height: 50px;
+	transition: all 300ms cubic-bezier(0.65, -0.02, 0.32, 1.1);
+	color: #fff;
+}
+/*TOP LEFT*/
+.addButton .option:nth-child(1){
+	top: 0;
+	left: 0;
+	border-top-left-radius: 20px;
+}
+/*TOP RIGHT*/
+.addButton .option:nth-child(2){
+	top: 0;
+	left: 50px;
+	border-top-right-radius: 20px;
+}
+/*BOTTOM LEFT*/
+.addButton .option:nth-child(3){
+	top: 50px;
+	left: 0;
+	border-bottom-left-radius: 20px;
+}
+/*BOTTOM RIGHT*/
+.addButton .option:nth-child(4){
+	top: 50px;
+	left: 50px;
+	border-bottom-right-radius: 20px;
+}
+
+/*HOVERS*/
+
+.addButton:hover{
+	transform: rotate(45deg);
+}
+
+.addButton:hover .option{
+	border-radius: 20px;
+}
+
+.addButton:hover .option .icon{
+	opacity: 1;
+	visibility: visible;
+}
+
+.addButton:hover .placeHolder{
+	width: 110px;
+	height: 110px;
+	visibility: hidden;
+	opacity: 0;
+}
+
+
+.addButton:hover .option:nth-child(1){
+	top: -10px;
+	left: -10px;
+}
+
+.addButton:hover .option:nth-child(2){
+	top: -10px;
+	left: 60px;
+}
+
+.addButton:hover .option:nth-child(3){
+	top: 60px;
+	left: -10px;
+}
+
+.addButton:hover .option:nth-child(4){
+	top: 60px;
+	left: 60px;
+}
