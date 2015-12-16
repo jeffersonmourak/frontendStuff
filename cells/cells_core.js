@@ -57,7 +57,7 @@
 			if((this.age > 4 && this.age < 8) && this.time % 100 === 0){
 				var n = (Math.random() * (1700 - 1) + 1);
 				if(n > 700 && n < 1500){
-					//this.scope.cells.push(new Cell(this.scope,this.x,this.y))
+					this.scope.cells.push(new Cell(this.scope,this.x,this.y))
 				}
 			}
 
@@ -76,7 +76,7 @@
 				this.color = "#00A";
 			}
 			if(this.age > 13 + this.lifeExpect || (this.sickness && this.age > (13 - this.sickDown))){
-				//this.died = true;
+				this.died = true;
 			}
 
 			if(this.hungry < 70){				
@@ -113,6 +113,7 @@
 						if((this.x >= this.to.x - (this.radius / 2) && this.x <= this.to.x + (this.radius / 2)) && (this.y >= this.to.y - (this.radius / 2) && this.y <= this.to.y + (this.radius / 2))){
 							if(this.scope.food[this.foodTarget] !== undefined){
 								this.scope.food[this.foodTarget].eated = true;
+								this.scope.food.splice(this.foodTarget, 1);
 								this.moving = false;
 								this.hungry += 40;
 							}
@@ -131,7 +132,7 @@
 			this.x += this.xA;
 			this.y += this.yA;
 
-			if(this.hungry <= 0){
+			if(this.hungry <= 0 || (this.hungry <= 50 && this.scope.food.length == 0)){
 				this.died = true;
 			}
 
