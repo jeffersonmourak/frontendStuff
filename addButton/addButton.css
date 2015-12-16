@@ -1,6 +1,6 @@
 .addButton{
-	width: 100px;
-	height: 100px;
+	width: 120px;
+	height: 120px;
 	position: relative;
 	transition: all 200ms ease;
 }
@@ -9,16 +9,16 @@
 	font-family: 'Dosis', sans-serif;
 	font-weight: 400;
 	position: absolute;
-	width: 100px;
-	height: 100px;
+	width: 120px;
+	height: 120px;
 	text-align: center;
-	line-height: 70px;
+	line-height: 90px;
 	font-size: 100px;
 	color: #fff;
 	visibility: visible;
 	opacity: 1;
 	transition: all 200ms ease;
-	text-transform: scale(1);
+	transform: scale(1);
 }
 
 
@@ -43,26 +43,26 @@
 }
 /*TOP LEFT*/
 .addButton .option:nth-child(1){
-	top: 0;
-	left: 0;
+	top: 10px;
+	left: 10px;
 	border-top-left-radius: 20px;
 }
 /*TOP RIGHT*/
 .addButton .option:nth-child(2){
-	top: 0;
-	left: 50px;
+	top: 10px;
+	left: 60px;
 	border-top-right-radius: 20px;
 }
 /*BOTTOM LEFT*/
 .addButton .option:nth-child(3){
-	top: 50px;
-	left: 0;
+	top: 60px;
+	left: 10px;
 	border-bottom-left-radius: 20px;
 }
 /*BOTTOM RIGHT*/
 .addButton .option:nth-child(4){
-	top: 50px;
-	left: 50px;
+	top: 60px;
+	left: 60px;
 	border-bottom-right-radius: 20px;
 }
 
@@ -82,29 +82,29 @@
 }
 
 .addButton:hover .placeHolder{
-	width: 110px;
-	height: 110px;
+	width: 120px;
+	height: 120px;
 	visibility: hidden;
 	opacity: 0;
 }
 
 
 .addButton:hover .option:nth-child(1){
-	top: -10px;
-	left: -10px;
+	top: 0px;
+	left: 0px;
 }
 
 .addButton:hover .option:nth-child(2){
-	top: -10px;
-	left: 60px;
+	top: 0px;
+	left: 70px;
 }
 
 .addButton:hover .option:nth-child(3){
-	top: 60px;
-	left: -10px;
+	top: 70px;
+	left: 0px;
 }
 
 .addButton:hover .option:nth-child(4){
-	top: 60px;
-	left: 60px;
+	top: 70px;
+	left: 70px;
 }
