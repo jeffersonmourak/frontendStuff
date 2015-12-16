@@ -68,8 +68,15 @@
 			this.time++;
 		},
 		draw: function() {
+			var radius = 2;
+			if(this.age > 1 && this.age <= 10){
+				radius = this.age;
+			}
+			else if(this.age > 10){
+				radius = 10;
+			}
 			this.context.beginPath();
-            this.context.arc(this.x,this.y, 10, 0, 2 * Math.PI);
+            this.context.arc(this.x,this.y, radius, 0, 2 * Math.PI);
             this.context.fillStyle = this.color;
             this.context.fill();
             this.context.closePath();
